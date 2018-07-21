@@ -1,7 +1,5 @@
 ﻿using BLL.Abstract;
 using BLL.ViewModels;
-using DAL.Abastract;
-using DAL.Concrete;
 using DAL.Entities;
 using System;
 using System.Collections.Generic;
@@ -18,6 +16,19 @@ namespace BLL.Services
         {
             _context = new EFContext();
         }
+
+        public void Add(DepartmentAddViewModel model)
+        {
+            Depatment depatment = new Depatment
+            {
+                Name=model.Name,
+                Image=model.Image,
+                Description=model.Description
+            };
+            _context.Depatments.Add(depatment);
+            _context.SaveChanges();
+        }
+
         public IList<DepartmentItemViewModel> GetAll()
         {
             IList<DepartmentItemViewModel> model = null;

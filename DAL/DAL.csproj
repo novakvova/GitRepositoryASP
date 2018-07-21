@@ -68,5 +68,9 @@
       <DependentUpon>201807210800266_Create tblWorkers and tblDepartments.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Abastract\" />
+    <Folder Include="Concrete\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

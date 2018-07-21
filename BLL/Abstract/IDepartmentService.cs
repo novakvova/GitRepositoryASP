@@ -10,5 +10,6 @@ namespace BLL.Abstract
     public interface IDepartmentService
     {
         IList<DepartmentItemViewModel> GetAll();
+        void Add(DepartmentAddViewModel model);
     }
 }

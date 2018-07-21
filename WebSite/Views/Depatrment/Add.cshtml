@@ -1,0 +1,26 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add</title>
+</head>
+<body>
+    <h2>Додати новий департамент</h2>
+    <div>
+        @using (Html.BeginForm())
+        {
+            <label>Назва</label>
+            <input type="text" name="Name" id="Name" /> <br />
+            <label>Опис</label>
+            <textarea cols="20" rows="20" name="Description" id="Description"></textarea> <br />
+            <input type="submit" value="Додати департамент" />
+        }
+    </div>
+</body>
+</html>
